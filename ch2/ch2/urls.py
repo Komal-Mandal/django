@@ -1,5 +1,5 @@
 """
-URL configuration for ch1 project.
+URL configuration for ch2 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -16,7 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from app1 import views as ap1
+from app2 import views as ap2
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', ap1.home, name='home'),
+    path('myfun/', ap1.hello, name='hello'),
+     path('home1/', ap2.home1, name='home1'),
+    
 ]
